@@ -20,7 +20,16 @@ class SignupForm(forms.Form):
                 "placeholder":"email"
             }
         ))
-    
+    """  
+    genero = forms.CharField(
+        max_length=100,
+        widget=forms.CharField(
+            attrs={
+                "class":"form-control",
+                "placeholder":"genero"
+            }
+        ))
+    """
     password  = forms.CharField(
         max_length=100,
         widget=forms.PasswordInput(
@@ -29,7 +38,7 @@ class SignupForm(forms.Form):
                 "placeholder":"password"
             }
         ))
-    
+
     confirm_password  = forms.CharField(
         max_length=100,
         widget=forms.PasswordInput(

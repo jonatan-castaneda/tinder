@@ -52,16 +52,16 @@
 		<a href="#" class="fh5co-offcanvass-close js-fh5co-offcanvass-close">Crazy goat<i class="icon-cross"></i> </a>
 		<h1 class="fh5co-logo"><a class="navbar-brand" href="index.html"></a></h1>
 		{% if request.user.is_authenticated %}
-		<h3>Hola {{request.user.email}}, listo para la acción?</h3>
+		<h3>Hola!, listo para la acción?</h3>
 		{% endif %}
 		<ul>
 			<li class="active"><a href="{% url 'landing:index' %}">Home</a></li>
 			{% if not request.user.is_authenticated %}
-			<li><a href="">Sign up</a></li>
+			<li><a href="{% url 'landing:signup' %}">Sign up</a></li>
 			<li><a href="{% url 'landing:login' %}">Login</a></li>
 			{% else %}
 			<li><a href="{% url 'landing:uploadImage' %}">Upload your image</a></li>
-			<li><a href="{% url 'landing:uploadImage' %}">Matchs</a></li>
+			<li><a href="{% url 'landing:matchs' %}">Matchs</a></li>
 			<li><a href="{% url 'landing:logout' %}">Logout</a></li>
 			{% endif %}
 		</ul>
@@ -102,7 +102,7 @@
 						<a href="#"><i class="icon-dribbble"></i></a>
 						<a href="#"><i class="icon-youtube"></i></a>
 					</p>
-					<p><small>&copy; Hydrogen Free HTML5 Template. All Rights Reserved. <br>Designed by: <a href="http://freehtml5.co/" target="_blank">FREEHTML5.co</a> | Images by: <a href="http://pexels.com" target="_blank">Pexels</a> </small></p>
+					<p><small>&copy; Crazy goat. All Rights Reserved. <br>Designed by: <a href="http://freehtml5.co/" target="_blank">FREEHTML5.co</a> | Images by: <a href="http://pexels.com" target="_blank">Pexels</a> </small></p>
 				</div>
 			</div>
 		</div>
